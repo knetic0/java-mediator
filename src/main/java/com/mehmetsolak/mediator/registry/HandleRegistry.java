@@ -9,8 +9,8 @@ import java.util.*;
 
 public final class HandleRegistry {
 
-    private final Map<Class<?>, RequestHandler<? extends Request<?>, ?>> requestHandlers;
-    private final Map<Class<?>, List<NotificationHandler<? extends Notification>>> notificationHandlers;
+    private final Map<Class<? extends Request<?>>, RequestHandler<? extends Request<?>, ?>> requestHandlers;
+    private final Map<Class<? extends Notification>, List<NotificationHandler<? extends Notification>>> notificationHandlers;
 
     public HandleRegistry() {
         this.requestHandlers = new HashMap<>();

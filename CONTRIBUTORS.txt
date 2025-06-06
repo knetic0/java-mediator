@@ -1,0 +1,5 @@
+This file contains a list of people who have made large contributions
+to the public version of Java Mediator Library.
+
+Original Java Mediator Library design and implementation:
+    Mehmet Solak <solakmehmet02@gmail.com>
