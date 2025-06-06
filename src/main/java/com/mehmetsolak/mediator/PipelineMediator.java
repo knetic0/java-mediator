@@ -25,7 +25,7 @@ public final class PipelineMediator {
 
     public void registerPipeline(
             Class<? extends Request<?>> requestType, PipelineBehavior<? extends Request<?>, ?> behavior) {
-        pipelineBehaviors.computeIfAbsent(requestType, k -> new ArrayList<>())
+        pipelineBehaviors.computeIfAbsent(requestType, _ -> new ArrayList<>())
                 .add(behavior);
     }
 

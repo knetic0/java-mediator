@@ -22,7 +22,7 @@ public final class HandleRegistry {
     }
 
     public <TNotification extends Notification> void registerNotificationHandler(Class<TNotification> notification, NotificationHandler<TNotification> handlers) {
-        this.notificationHandlers.computeIfAbsent(notification, k -> new ArrayList<>()).add(handlers);
+        this.notificationHandlers.computeIfAbsent(notification, _ -> new ArrayList<>()).add(handlers);
     }
 
     @SuppressWarnings("unchecked")
